@@ -17,8 +17,14 @@
         <!--android:layout_height="wrap_content" />-->
     <Button
         android:layout_gravity="center"
-        android:text="Add Fragment"
-        android:id="@+id/buttonAddFragment"
+        android:text="Add Fragment Android"
+        android:id="@+id/buttonAddFragmentAndroid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_gravity="center"
+        android:text="Add Fragment Php"
+        android:id="@+id/buttonAddFragmentPhp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <FrameLayout
