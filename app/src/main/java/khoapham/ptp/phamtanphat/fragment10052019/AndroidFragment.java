@@ -22,7 +22,10 @@ public class AndroidFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_android, container, false);
         txtAndroid = view.findViewById(R.id.textviewAndroid);
-        txtAndroid.setText("Android Fragment");
+
+        Bundle bundle = getArguments();
+        String value = bundle.getString("text");
+        txtAndroid.setText(value);
         return view;
     }
 

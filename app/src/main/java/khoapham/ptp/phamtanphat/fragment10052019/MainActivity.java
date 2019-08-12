@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         btnAddFragmentAndroid = findViewById(R.id.buttonAddFragmentAndroid);
         btnAddFragmentPhp = findViewById(R.id.buttonAddFragmentPhp);
 
@@ -28,13 +27,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAddFragmentAndroid.setOnClickListener(MainActivity.this);
 
     }
-
     @Override
     public void onClick(View view) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         switch (view.getId()){
             case R.id.buttonAddFragmentAndroid :
                 fragment = new AndroidFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("text","Hello Woord");
+                fragment.setArguments(bundle);
                 break;
             case R.id.buttonAddFragmentPhp:
                 fragment = new PhpFragment();
