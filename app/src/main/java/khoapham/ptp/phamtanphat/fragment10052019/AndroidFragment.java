@@ -16,10 +16,13 @@ import android.widget.TextView;
  */
 public class AndroidFragment extends Fragment {
 
+    TextView txtAndroid;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_android, container, false);
+        txtAndroid = view.findViewById(R.id.textviewAndroid);
+        txtAndroid.setText("Android Fragment");
         return view;
     }
 
